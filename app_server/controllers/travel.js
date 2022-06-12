@@ -22,7 +22,7 @@ const travel = (req, res) => {
 // CLN: Added new helper function to render the travel list view when called in travelList below
 const renderTravelList = (req, res, responseBody) => {
     let message = null;
-    let pageTitle = process.env.npm_package_description + ' - Travel';
+    let pageTitle = 'Travlr Getaways - Travel';
 
     if (!(responseBody instanceof Array)) {
         message = 'API lookup error';

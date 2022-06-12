@@ -30,13 +30,24 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// CLN: When any HTTP requests come in for /api pass to the apiRouter
-app.use('/api', apiRouter);
+
+
+// CLN : allow CORS access to Express backend from Angular frontend (origin at localhost:4200)
+// NOTE: This must be before the app.use('/api', apiRouter) statement, otherwise the page it routed 
+//       before the necessary CORS headers are added to the HTML
+app.use('/api', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  next();
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // CLN: added new travel route
 app.use('/travel', travelRouter);
+// CLN: When any HTTP requests come in for /api pass to the apiRouter
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
