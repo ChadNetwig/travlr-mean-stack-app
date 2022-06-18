@@ -58,4 +58,8 @@ process.on('SIGTERM', () => {
 
 connect();
 
+// CLN: bring in MongoDB Schema
 require('./models/travlr');
+
+// CLN: added for authentication
+require('./models/user');

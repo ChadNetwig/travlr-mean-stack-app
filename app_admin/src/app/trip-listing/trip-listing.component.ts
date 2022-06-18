@@ -4,6 +4,8 @@ import { NavigationEnd, Router } from "@angular/router";
 // import { trips } from '../data/trips';
 import { TripDataService } from '../services/trip-data.service';
 import { Trip } from '../models/trip';
+// CLN: Added AuthenticationService
+import { AuthenticationService } from '../services/authentication.service';
 
 
 @Component({
@@ -20,6 +22,8 @@ export class TripListingComponent implements OnInit {
 
   constructor(
     private tripDataService: TripDataService,
+    // CLN: Added authService
+    private authService: AuthenticationService,
     // CLN: Added router var for Angular routing functionality
     private router: Router
     ) { }
@@ -38,6 +42,11 @@ export class TripListingComponent implements OnInit {
           this.message = foundTrips.length > 0 ? '' : 'No trips found';
           this.trips = foundTrips;
    });
+  }
+  
+  // CLN: added isLoggedIn
+  public isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
   }
 
   ngOnInit(): void {
