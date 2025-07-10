@@ -94,8 +94,6 @@ All endpoints accept and return JSON.
 
 <img src="assets/cs464-travlr-2.jpg" alt="Travlr Getaways UI Example 2" width="600"/>
 
----
-
 ### Home Page
 
 <img src="assets/Travlr-homepage.png" alt="Travlr Getaways Home Page" width="600"/>
