@@ -100,6 +100,8 @@ All endpoints accept and return JSON.
 
 <img src="assets/Travlr-homepage.png" alt="Travlr Getaways Home Page" width="600"/>
 
+---
+
 ## Technologies Used
 - **MongoDB:** NoSQL database for persistence
 - **Express.js:** RESTful server framework
