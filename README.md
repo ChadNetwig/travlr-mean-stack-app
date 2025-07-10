@@ -44,6 +44,19 @@ The application is structured into **three tiers**:
 - Stores user accounts, travel packages, and booking data.
 - Provides schema definitions and CRUD operations via Mongoose ODM.
 
+
+### 4. Implementation details of Single-Page Application (SPA)
+
+The first phase was building a static version of the application on top of an Express/Node.js framework on the server side. The static site essentially consisted of a collection of mockup hardcoded HTML pages, images, and CSS. No Express routes or separation of concerns were used in this phase of development.
+
+For the second phase of frontend development, I migrated the static HTML to Handlebars template views, refactored repeated code like headers and footers into Handlebar "partials," and separated the concerns in Express into a Model-View-Controller (MVC) software architectural pattern. To implement the MVC pattern, I created a directory called "app_server" and a subdirectory in it called "controller" and various other directories to organize the code into the MVC pattern. I then established Express routes to direct client-side browser URL requests to the controller code, which was now used to render the Handlebars view templates and all other HTML to the frontend browser.
+
+For the third phase, I further removed static hardcoded HTML from the Travlr site, such as the various Trips data, and refactored it into a static JSON file. Next, I updated the controllers to pass the JSON data to the respective Trips Handlebars view templates, where I included Handlebars directives to receive and parse the JSON into HTML dynamically to display in the browser.
+
+For the fourth phase, I further separated concerns into a model structure with updates to the routes and controllers and implementation of Mongoose models to now retrieve the Trips JSON information from the MongoDB database via Mongoose models (schemas). The JSON returned from MongoDB was now sent to the Handlebars view templates instead of sourcing the static JSON data file for the Trips info.
+
+During the final phase of the frontend development, the entire frontend was migrated from the server-side Express/Node.js over to a client-side Angular SPA site. For example, now the client will point their browser to a different HTTP port than the backend Express/Node HTTP port, which completely separates the frontend from the backend. To implement the SPA, I created various Angular components to create the TypeScript, HTML, and CSS files that would now dynamically render the HTML by making HTTP requests for JSON data to the Express/Node backend. The MVC design pattern was used to separate concerns by using Angular routes to various controllers, models, and views. For instance, the HTML in Angular is essentially a template that uses angle-bracketed selector tags as placeholders to receive HTML from Angular components. All HTML updates are now made in the browser itself on the client-side with Angular updating the Document Object Model directly. This gives rise to fast performance for the end-user.
+
 ---
 
 ## MVC Workflow
