@@ -4,8 +4,8 @@
 Travlr Getaways is a full-stack web application designed for managing travel bookings. The system supports user registration, itinerary management, and administrative maintenance through a responsive, single-page application (SPA) interface.
 
 This project demonstrates the implementation of the **Model–View–Controller (MVC) architectural pattern** using the MEAN stack:  
-- **MongoDB** 4.0 for data storage  
-- **Express.js** ver 4.16.1 for server-side logic  
+- **MongoDB** v4.0 for data storage  
+- **Express.js** v4.16.1 for server-side logic  
 - **Angular** v6.2.9 for the front-end SPA  
 - **Node.js** v16.15.0 as the runtime environment  
 
