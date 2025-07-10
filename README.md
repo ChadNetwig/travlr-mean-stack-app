@@ -45,7 +45,7 @@ The application is structured into **three tiers**:
 - Provides schema definitions and CRUD operations via Mongoose ODM.
 
 
-### 4. Implementation details for Single-Page Application (SPA)
+### Implementation details for Single-Page Application (SPA)
 
 The first phase was building a static version of the application on top of an Express/Node.js framework on the server side. The static site essentially consisted of a collection of mockup hardcoded HTML pages, images, and CSS. No Express routes or separation of concerns were used in this phase of development.
 
