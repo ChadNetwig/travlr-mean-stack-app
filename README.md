@@ -88,6 +88,15 @@ All endpoints accept and return JSON.
 
 ---
 
+---
+
+## User Interface – Example Screens
+
+<img src="assets/cs464-travlr-1.jpg" alt="Travlr Getaways UI Example 1" width="600"/>
+
+<img src="assets/cs464-travlr-2.jpg" alt="Travlr Getaways UI Example 2" width="600"/>
+
+
 ## Technologies Used
 - **MongoDB:** NoSQL database for persistence
 - **Express.js:** RESTful server framework
