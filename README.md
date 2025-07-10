@@ -84,9 +84,18 @@ All endpoints accept and return JSON.
 ---
 
 ### MEAN Stack Architecture Diagram
-<img src="assets/mean-stack-architecture-sequence%20diagram-example.jpeg" alt="MEAN Stack Architecture Diagram" width="600"/>
+<img src="assets/mean-stack-architecture-sequence%20diagram-example.png" alt="MEAN Stack Architecture Diagram" width="600"/>
 
 ---
+
+---
+
+## User Interface – Example Screens
+
+<img src="assets/cs464-travlr-1.jpg" alt="Travlr Getaways UI Example 1" width="600"/>
+
+<img src="assets/cs464-travlr-2.jpg" alt="Travlr Getaways UI Example 2" width="600"/>
+
 
 ## Technologies Used
 - **MongoDB:** NoSQL database for persistence
