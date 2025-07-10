@@ -84,7 +84,7 @@ All endpoints accept and return JSON.
 ---
 
 ### MEAN Stack Architecture Diagram
-<img src="assets/mean-stack-architecture-sequence%20diagram-example.jpeg" alt="MEAN Stack Architecture Diagram" width="600"/>
+<img src="assets/mean-stack-architecture-sequence%20diagram-example.png" alt="MEAN Stack Architecture Diagram" width="600"/>
 
 ---
 
